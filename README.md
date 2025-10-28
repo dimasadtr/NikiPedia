@@ -1,52 +1,100 @@
-# NikiPedia App
-Aplikasi ini merupakan proyek UTS mata kuliah Pemrograman Mobile yang dikembangkan menggunakan Flutter.  
-Tema aplikasi adalah Dota 2 Hero Encyclopedia, sebuah aplikasi informasi berbasis API yang menampilkan data para hero dalam game Dota 2.
+Tentu, ini adalah draf README.md yang telah dirapikan dan diformat agar terlihat profesional dan mudah dibaca, berdasarkan teks yang Anda berikan.
 
----
+-----
 
-## Tujuan Aplikasi
-Tujuan dari pengembangan aplikasi ini adalah untuk:
-- Menyediakan media informasi bagi pengguna untuk mempelajari hero Dota 2
-- Menampilkan daftar hero Dota 2 secara dinamis menggunakan API dari OpenDota.
-- Menyediakan detail hero, termasuk atribut dasar seperti Strength, Agility, Intelligence, HP, dan Mana
-- Menampilkan skill atau ability hero, lengkap dengan deskripsi dan icon abilities
-- Mempermudah pencarian hero melalui fitur pencarian dan filter berdasarkan role
----
+# NikiPedia: Ensiklopedia Hero Dota 2  Dota 2
 
-## Daftar Halaman
-Aplikasi NikiPedia terdiri dari beberapa halaman utama yang saling terhubung melalui sistem navigasi berbasis Bottom Navigation Bar. Setiap halaman memiliki fungsi spesifik dalam menampilkan informasi hero dari permainan Dota 2 yang diperoleh melalui OpenDota API. Berikut penjelasan masing-masing halaman:
-  1. Halaman Home (home_page.dart)
-     Halaman ini berfungsi sebagai halaman pembuka aplikasi yang menampilkan daftar hero populer dari permainan Dota 2.
+NikiPedia adalah aplikasi *mobile* ensiklopedia hero Dota 2 yang dikembangkan menggunakan Flutter. Aplikasi ini menyediakan informasi lengkap mengenai para hero, mulai dari atribut dasar hingga *skill* (abilities), yang datanya diambil secara dinamis dari OpenDota API.
 
-  2. Halaman Daftar Hero (heroes_page.dart)
-    Halaman ini menampilkan seluruh hero Dota 2. Data hero diambil dari endpoint https://api.opendota.com/api/heroStats. Setiap kartu hero memuat gambar dan nama, dan apabila ditekan akan mengarahkan pengguna ke halaman detail hero. 
+### Konteks Proyek
 
-  3. Halaman Detail Hero (hero_detail_page.dart)
-    Halaman ini menampilkan informasi lengkap tentang hero yang dipilih, termasuk gambar, nama, atribut utama, tipe serangan, serta peran (role). Selain itu, halaman ini juga menampilkan kemampuan (abilities) dalam bentuk ikon bundar kecil. Tata letak dibuat       menyerupai tampilan profil hero pada game Dota 2. Tombol arrow back di bagian kiri atas memungkinkan pengguna untuk kembali ke halaman sebelumnya.
+Proyek ini dikembangkan untuk memenuhi tugas Ujian Tengah Semester (UTS) mata kuliah Pemrograman Mobile.
 
-  4. Halaman Profil (profile_page.dart)
-    Halaman ini berfungsi untuk menampilkan identitas pengembang aplikasi atau informasi profil pengguna. Meskipun sederhana, halaman ini melengkapi struktur navigasi utama aplikasi dan dapat diperluas di masa depan untuk menambahkan fitur profil pengguna atau     informasi tambahan lainnya.
+-----
 
-  5. Navigasi Utama (main_page.dart)
-  Aplikasi menggunakan BottomNavigationBar sebagai sistem navigasi utama. Terdapat tiga menu utama yang dapat diakses, yaitu:
-    - Home: Menampilkan hero populer.
-    - Heroes: Menampilkan daftar lengkap hero.
-    - Profile: Menampilkan profil pengguna
-  ---
+## ✨ Fitur Utama
 
- ## API yang Digunakan
-Aplikasi ini mengambil data dari OpenDota API:
-- Data Hero:  
-  `https://api.opendota.com/api/heroStats`  
-- Data Abilities:  
-  `https://raw.githubusercontent.com/odota/dotaconstants/master/build/abilities.json`
+  * **Media Informasi:** Menyediakan platform yang mudah digunakan untuk mempelajari hero-hero di Dota 2.
+  * **Daftar Hero Dinamis:** Menampilkan seluruh daftar hero Dota 2 secara dinamis menggunakan data dari OpenDota API.
+  * **Detail Hero Lengkap:** Menampilkan detail hero, termasuk atribut dasar (Strength, Agility, Intelligence), HP, Mana, tipe serangan, dan *role*.
+  * **Tampilan Skill (Abilities):** Menampilkan semua *skill* yang dimiliki hero, lengkap dengan ikon dan deskripsinya.
+  * **Pencarian & Filter:** Memudahkan pengguna mencari hero spesifik atau memfilter berdasarkan *role* mereka di dalam game.
 
-    ---
- 
-## Cara Menjalankan Aplikasi
-1. Pastikan Anda telah menginstal Flutter komputer.
-2. Clone repositori : git clone [URL_GITHUB_ANDA]
-3. Pindah ke direktori proyek: cd NikiPedia
-4. Jalankan perintah unduh semua dependency:: flutter pub get
-6. Jalankan aplikasi dengan perintah: flutter run
+-----
 
+## 📱 Struktur Halaman Aplikasi
+
+Aplikasi ini menggunakan `BottomNavigationBar` sebagai sistem navigasi utama untuk berpindah antar halaman.
+
+1.  **Halaman Home (`home_page.dart`)**
+
+      * Berfungsi sebagai halaman pembuka aplikasi.
+      * Menampilkan daftar hero-hero yang sedang populer.
+
+2.  **Halaman Daftar Hero (`heroes_page.dart`)**
+
+      * Menampilkan **seluruh** hero Dota 2 dalam bentuk *grid* atau *list*.
+      * Data diambil dari endpoint `api/heroStats`.
+      * Setiap kartu hero dapat di-klik untuk diarahkan ke halaman detail.
+
+3.  **Halaman Detail Hero (`hero_detail_page.dart`)**
+
+      * Menampilkan informasi lengkap dari hero yang dipilih (gambar, nama, atribut, *role*, dll.).
+      * Menampilkan kemampuan (*abilities*) dalam bentuk ikon bundar kecil.
+      * Tata letak didesain agar menyerupai tampilan profil hero di dalam game Dota 2.
+
+4.  **Halaman Profil (`profile_page.dart`)**
+
+      * Menampilkan identitas pengembang aplikasi atau informasi profil pengguna.
+
+5.  **Navigasi Utama (`main_page.dart`)**
+
+      * File ini mengelola `BottomNavigationBar` yang memiliki tiga menu utama: **Home**, **Heroes**, dan **Profile**.
+
+-----
+
+## 🔌 API yang Digunakan
+
+Aplikasi ini mengandalkan dua sumber API eksternal untuk mendapatkan datanya:
+
+  * **Data Hero (OpenDota API):**
+    ```
+    https://api.opendota.com/api/heroStats
+    ```
+  * **Data Abilities (Dotaconstants):**
+    ```
+    https://raw.githubusercontent.com/odota/dotaconstants/master/build/abilities.json
+    ```
+
+-----
+
+## 🚀 Cara Menjalankan Aplikasi
+
+Pastikan Anda telah menginstal **Flutter SDK** di komputer Anda sebelum melanjutkan.
+
+1.  **Clone Repositori**
+    Ganti `[URL_GITHUB_ANDA]` dengan URL repositori Anda yang sebenarnya.
+
+    ```bash
+    git clone [URL_GITHUB_ANDA]
+    ```
+
+2.  **Pindah ke Direktori Proyek**
+
+    ```bash
+    cd NikiPedia
+    ```
+
+3.  **Unduh Dependencies**
+    Jalankan perintah ini untuk mengunduh semua paket dan *dependency* yang diperlukan oleh proyek.
+
+    ```bash
+    flutter pub get
+    ```
+
+4.  **Jalankan Aplikasi**
+    Pastikan Anda memiliki emulator yang berjalan atau perangkat fisik yang terhubung, lalu jalankan perintah:
+
+    ```bash
+    flutter run
+    ```
