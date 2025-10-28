@@ -1,4 +1,4 @@
-# NikiPedia: Ensiklopedia Hero Dota 2  Dota 2
+# NikiPedia: Ensiklopedia Hero Dota 2
 
 NikiPedia adalah aplikasi *mobile* ensiklopedia hero Dota 2 yang dikembangkan menggunakan Flutter. Aplikasi ini menyediakan informasi lengkap mengenai para hero, mulai dari atribut dasar hingga *skill* (abilities), yang datanya diambil secara dinamis dari OpenDota API.
 
