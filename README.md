@@ -45,7 +45,7 @@ Aplikasi ini menggunakan `BottomNavigationBar` sebagai sistem navigasi utama unt
 
 4.  **Halaman Profil (`profile_page.dart`)**
 
-      * Menampilkan identitas pengembang aplikasi atau informasi profil pengguna.
+      * Menampilkan identitas pengembang 
 
 5.  **Navigasi Utama (`main_page.dart`)**
 
