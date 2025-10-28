@@ -1,7 +1,3 @@
-Tentu, ini adalah draf README.md yang telah dirapikan dan diformat agar terlihat profesional dan mudah dibaca, berdasarkan teks yang Anda berikan.
-
------
-
 # NikiPedia: Ensiklopedia Hero Dota 2  Dota 2
 
 NikiPedia adalah aplikasi *mobile* ensiklopedia hero Dota 2 yang dikembangkan menggunakan Flutter. Aplikasi ini menyediakan informasi lengkap mengenai para hero, mulai dari atribut dasar hingga *skill* (abilities), yang datanya diambil secara dinamis dari OpenDota API.
@@ -70,10 +66,10 @@ Aplikasi ini mengandalkan dua sumber API eksternal untuk mendapatkan datanya:
 
 ## 🚀 Cara Menjalankan Aplikasi
 
-Pastikan Anda telah menginstal **Flutter SDK** di komputer Anda sebelum melanjutkan.
+Pastikan Anda telah menginstal **Flutter SDK** di komputer
 
 1.  **Clone Repositori**
-    Ganti `[URL_GITHUB_ANDA]` dengan URL repositori Anda yang sebenarnya.
+    Ganti `[URL_GITHUB_ANDA]` dengan URL Anda
 
     ```bash
     git clone [URL_GITHUB_ANDA]
@@ -86,14 +82,14 @@ Pastikan Anda telah menginstal **Flutter SDK** di komputer Anda sebelum melanjut
     ```
 
 3.  **Unduh Dependencies**
-    Jalankan perintah ini untuk mengunduh semua paket dan *dependency* yang diperlukan oleh proyek.
+    Jalankan perintah ini untuk mengunduh semua paket dan *dependency* yang diperlukan
 
     ```bash
     flutter pub get
     ```
 
 4.  **Jalankan Aplikasi**
-    Pastikan Anda memiliki emulator yang berjalan atau perangkat fisik yang terhubung, lalu jalankan perintah:
+    Pastikan Anda memiliki emulator yang berjalan atau perangkat fisik yang terhubung
 
     ```bash
     flutter run
