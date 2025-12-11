@@ -2,7 +2,7 @@
 
 **NikiPedia** adalah aplikasi *mobile* berbasis Flutter yang menyajikan informasi lengkap mengenai hero-hero Dota 2 serta memantau hasil pertandingan profesional (*Pro Matches*) secara *real-time*.
 
-Aplikasi ini didesain dengan antarmuka **Modern Dark Mode** khas *gaming/esports*. 
+Aplikasi ini didesain dengan antarmuka **Modern Dark Mode** khas *Gaming / Esport*. 
 Aplikasi ini saya kembangkan karena dua alasan utama. Pertama, dari sisi user experience, saya melihat adanya kebutuhan akan akses informasi Dota 2 yang cepat, ringan, dan nyaman dibaca di HP, terutama untuk memantau hasil pertandingan pro secara live.
 Kedua, dari sisi akademik, proyek ini menjadi wadah bagi saya untuk menguji kemampuan dalam membangun aplikasi full-stack sederhana berbasis Flutter, mulai dari merancang arsitektur aplikasi, mengambil data dari API publik, hingga menyajikannya dalam UI yang user friendly.
 
@@ -13,12 +13,12 @@ Proyek ini dikembangkan untuk memenuhi tugas Ujian Akhir Semester (UAS) mata kul
 
 ## ✨ Fitur Utama
 
-* **🎨 Modern Esports UI:** Tampilan antarmuka bertema gelap (*Dark Mode*) dengan elemen gradasi, kartu transparan (*glassmorphism*), dan tipografi yang elegan.
+* **🎨 Modern Esports UI:** Tampilan antarmuka bertema gelap (*Dark Mode*) dengan elemen gradasi.
 * **🏠 Home Dashboard:** Menampilkan *Hero Banner* unggulan dan daftar hero populer dengan statistik kemenangan (*winrate*).
 * **⚔️ Daftar Hero Lengkap:** Akses ke seluruh database hero Dota 2 yang diambil secara dinamis dari OpenDota API.
 * **📊 Detail Hero Mendalam:** Informasi rinci mencakup atribut (Str/Agi/Int), peran (*Roles*), tipe serangan, hingga daftar *skill/abilities* lengkap.
 * **🏆 Pro Matches Tracker:** Memantau hasil pertandingan profesional terbaru dari seluruh dunia, lengkap dengan skor, nama tim (Radiant vs Dire), nama liga, dan durasi pertandingan.
-* **⚡ Performa Tinggi:** Menggunakan manajemen *state* yang efisien dan *caching* gambar untuk pengalaman pengguna yang mulus.
+* **⚡ Performa Tinggi:** Menggunakan manajemen *state* yang efisien dan *caching* gambar.
 
 ---
 
