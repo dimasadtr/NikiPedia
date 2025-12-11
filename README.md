@@ -1,96 +1,113 @@
-# NikiPedia: Ensiklopedia Hero Dota 2
+# NikiPedia: Ensiklopedia & Live Tracker Dota 2
 
-NikiPedia adalah aplikasi *mobile* ensiklopedia hero Dota 2 yang dikembangkan menggunakan Flutter. Aplikasi ini menyediakan informasi lengkap mengenai para hero, mulai dari atribut dasar hingga *skill* (abilities), yang datanya diambil secara dinamis dari OpenDota API.
+**NikiPedia** adalah aplikasi *mobile* berbasis Flutter yang menyajikan informasi lengkap mengenai hero Dota 2 serta memantau hasil pertandingan profesional (*Pro Matches*) secara *real-time*.
 
-### Konteks Proyek
+Aplikasi ini didesain dengan antarmuka **Modern Dark Mode** khas *gaming/esports*, memberikan pengalaman visual yang memukau dan nyaman bagi pengguna.
 
-Proyek ini dikembangkan untuk memenuhi tugas Ujian Tengah Semester (UTS) mata kuliah Pemrograman Mobile.
+### 📝 Konteks Proyek
+Proyek ini dikembangkan untuk memenuhi tugas Ujian Akhir Semester (UAS) mata kuliah Pemrograman Mobile.
 
------
+---
 
 ## ✨ Fitur Utama
 
-  * **Media Informasi:** Menyediakan platform yang mudah digunakan untuk mempelajari hero-hero di Dota 2.
-  * **Daftar Hero Dinamis:** Menampilkan seluruh daftar hero Dota 2 secara dinamis menggunakan data dari OpenDota API.
-  * **Detail Hero Lengkap:** Menampilkan detail hero, termasuk atribut dasar (Strength, Agility, Intelligence), HP, Mana, tipe serangan, dan *role*.
-  * **Tampilan Skill (Abilities):** Menampilkan semua *skill* yang dimiliki hero, lengkap dengan ikon dan deskripsinya.
-  * **Pencarian & Filter:** Memudahkan pengguna mencari hero spesifik atau memfilter berdasarkan *role* mereka di dalam game.
+* **🎨 Modern Esports UI:** Tampilan antarmuka bertema gelap (*Dark Mode*) dengan elemen gradasi, kartu transparan (*glassmorphism*), dan tipografi yang elegan.
+* **🏠 Home Dashboard:** Menampilkan *Hero Banner* unggulan dan daftar hero populer dengan statistik kemenangan (*winrate*).
+* **⚔️ Daftar Hero Lengkap:** Akses ke seluruh database hero Dota 2 yang diambil secara dinamis dari OpenDota API.
+* **📊 Detail Hero Mendalam:** Informasi rinci mencakup atribut (Str/Agi/Int), peran (*Roles*), tipe serangan, hingga daftar *skill/abilities* lengkap.
+* **🏆 Pro Matches Tracker:** Memantau hasil pertandingan profesional terbaru dari seluruh dunia, lengkap dengan skor, nama tim (Radiant vs Dire), nama liga, dan durasi pertandingan.
+* **⚡ Performa Tinggi:** Menggunakan manajemen *state* yang efisien dan *caching* gambar untuk pengalaman pengguna yang mulus.
 
------
+---
 
 ## 📱 Struktur Halaman Aplikasi
 
-Aplikasi ini menggunakan `BottomNavigationBar` sebagai sistem navigasi utama untuk berpindah antar halaman.
+Aplikasi ini menggunakan `BottomNavigationBar` sebagai navigasi utama dengan tiga menu inti:
 
 1.  **Halaman Home (`home_page.dart`)**
-
-      * Berfungsi sebagai halaman pembuka aplikasi.
-      * Menampilkan daftar hero-hero yang sedang populer.
+    * Halaman beranda dengan desain visual yang kuat.
+    * Menampilkan **Hero Banner** besar dengan efek *overlay gradient*.
+    * Bagian **Popular Heroes** dalam format *horizontal scroll*.
 
 2.  **Halaman Daftar Hero (`heroes_page.dart`)**
-
-      * Menampilkan **seluruh** hero Dota 2 dalam bentuk *grid* atau *list*.
-      * Data diambil dari endpoint `api/heroStats`.
-      * Setiap kartu hero dapat di-klik untuk diarahkan ke halaman detail.
-
+    * Katalog lengkap hero Dota 2.
+    * Data diambil dari endpoint `api/heroStats`.
+    * Setiap kartu hero menampilkan nama, *primary attribute*, dan *role* utama.
+      
 3.  **Halaman Detail Hero (`hero_detail_page.dart`)**
+    * Halaman detail yang muncul saat hero dipilih.
+    * Menampilkan *Lore* hero, atribut dasar, dan ikon-ikon *skill*.
 
-      * Menampilkan informasi lengkap dari hero yang dipilih (gambar, nama, atribut, *role*, dll.).
-      * Menampilkan kemampuan (*abilities*) dalam bentuk ikon bundar kecil.
-      * Tata letak didesain agar menyerupai tampilan profil hero di dalam game Dota 2.
+4.  **Halaman Matches (`match_page.dart`)**
+    * Menampilkan daftar 20 pertandingan profesional terakhir.
+    * Informasi mencakup: Nama Liga, Tim Pemenang (Hijau) vs Kalah (Putih), Skor Akhir, dan waktu pertandingan ("X hours ago").
+    * Data diambil dari endpoint `api/proMatches`.
 
-4.  **Halaman Profil (`profile_page.dart`)**
+---
 
-      * Menampilkan identitas pengembang 
+## 🛠️ Teknologi & Paket yang Digunakan
 
-5.  **Navigasi Utama (`main_page.dart`)**
+* **Framework:** [Flutter](https://flutter.dev/) - SDK utama untuk pengembangan aplikasi.
+* **Bahasa:** Dart - Bahasa pemrograman yang digunakan.
+* **Google Fonts:** (`google_fonts`) - Untuk kustomisasi tipografi (Font *Rakkas* & *Poppins*).
+* **HTTP:** (`http`) - Untuk melakukan request API ke OpenDota.
+* **Icons:** (`cupertino_icons` / Material Icons) - Ikon bawaan untuk navigasi dan UI.
 
-      * File ini mengelola `BottomNavigationBar` yang memiliki tiga menu utama: **Home**, **Heroes**, dan **Profile**.
+---
 
------
+## 🔌 API Reference
 
-## 🔌 API yang Digunakan
+Aplikasi ini menggunakan data publik dari **OpenDota API** & **DotaConstants**:
 
-Aplikasi ini mengandalkan dua sumber API eksternal untuk mendapatkan datanya:
+| Data | Sumber Endpoint |
+| :--- | :--- |
+| **Hero Stats** | `https://api.opendota.com/api/heroStats` |
+| **Pro Matches** | `https://api.opendota.com/api/proMatches` |
+| **Abilities** | `https://raw.githubusercontent.com/odota/dotaconstants/master/build/abilities.json` |
 
-  * **Data Hero (OpenDota API):**
-    ```
-    https://api.opendota.com/api/heroStats
-    ```
-  * **Data Abilities (Dotaconstants):**
-    ```
-    https://raw.githubusercontent.com/odota/dotaconstants/master/build/abilities.json
-    ```
-
------
+---
 
 ## 🚀 Cara Menjalankan Aplikasi
 
-Pastikan Anda telah menginstal **Flutter SDK** di komputer
+Pastikan Anda telah menginstal **Flutter SDK** di komputer Anda.
 
 1.  **Clone Repositori**
-    Ganti `[URL_GITHUB_ANDA]` dengan URL Anda
-
     ```bash
     git clone [URL_GITHUB_ANDA]
     ```
 
-2.  **Pindah ke Direktori Proyek**
-
+2.  **Masuk ke Direktori Proyek**
     ```bash
     cd NikiPedia
     ```
 
 3.  **Unduh Dependencies**
-    Jalankan perintah ini untuk mengunduh semua paket dan *dependency* yang diperlukan
-
+    Jalankan perintah ini untuk mengunduh paket (`http`, `google_fonts`, dll):
     ```bash
     flutter pub get
     ```
 
 4.  **Jalankan Aplikasi**
-    Pastikan Anda memiliki emulator yang berjalan atau perangkat fisik yang terhubung
-
+    Pastikan emulator atau perangkat fisik sudah terhubung:
     ```bash
     flutter run
     ```
+
+---
+
+## 📞 Kontak & Support
+
+Jika ada pertanyaan, masukan, atau kendala terkait pengembangan aplikasi ini, silakan hubungi:
+
+* 📧 **Email:** [230605110101@student.uin-malang.ac.id]
+* 🆔 **Identitas:** Dimas Aditya Ramadhan 230605110101
+* 
+
+---
+
+## 📄 Lisensi
+
+Project ini dikembangkan sebagai **Tugas Akhir Semester 5** pada mata kuliah **Pemrograman Mobile**.
+
+* **Institusi:** UIN Maulana Malik Ibrahim Malang
+* **Status:** *Educational Purpose / Academic Project*
