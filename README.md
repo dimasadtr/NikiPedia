@@ -1,8 +1,10 @@
 # NikiPedia: Ensiklopedia & Live Tracker Dota 2
 
-**NikiPedia** adalah aplikasi *mobile* berbasis Flutter yang menyajikan informasi lengkap mengenai hero Dota 2 serta memantau hasil pertandingan profesional (*Pro Matches*) secara *real-time*.
+**NikiPedia** adalah aplikasi *mobile* berbasis Flutter yang menyajikan informasi lengkap mengenai hero-hero Dota 2 serta memantau hasil pertandingan profesional (*Pro Matches*) secara *real-time*.
 
-Aplikasi ini didesain dengan antarmuka **Modern Dark Mode** khas *gaming/esports*, memberikan pengalaman visual yang memukau dan nyaman bagi pengguna.
+Aplikasi ini didesain dengan antarmuka **Modern Dark Mode** khas *gaming/esports*. 
+Aplikasi ini saya kembangkan karena dua alasan utama. Pertama, dari sisi user experience, saya melihat adanya kebutuhan akan akses informasi Dota 2 yang cepat, ringan, dan nyaman dibaca di HP, terutama untuk memantau hasil pertandingan pro secara live.
+Kedua, dari sisi akademik, proyek ini menjadi wadah bagi saya untuk menguji kemampuan dalam membangun aplikasi full-stack sederhana berbasis Flutter, mulai dari merancang arsitektur aplikasi, mengambil data dari API publik, hingga menyajikannya dalam UI yang user friendly.
 
 ### 📝 Konteks Proyek
 Proyek ini dikembangkan untuk memenuhi tugas Ujian Akhir Semester (UAS) mata kuliah Pemrograman Mobile.
@@ -40,7 +42,7 @@ Aplikasi ini menggunakan `BottomNavigationBar` sebagai navigasi utama dengan tig
 
 4.  **Halaman Matches (`match_page.dart`)**
     * Menampilkan daftar 20 pertandingan profesional terakhir.
-    * Informasi mencakup: Nama Liga, Tim Pemenang (Hijau) vs Kalah (Putih), Skor Akhir, dan waktu pertandingan ("X hours ago").
+    * Informasi mencakup: Nama Liga, Tim Pemenang (Hijau) vs Kalah (Putih), Skor Akhir, dan waktu pertandingan.
     * Data diambil dari endpoint `api/proMatches`.
 
 ---
@@ -73,7 +75,7 @@ Pastikan Anda telah menginstal **Flutter SDK** di komputer Anda.
 
 1.  **Clone Repositori**
     ```bash
-    git clone [URL_GITHUB_ANDA]
+    git clone (https://github.com/dimasadtr/NikiPedia.git)
     ```
 
 2.  **Masuk ke Direktori Proyek**
@@ -99,9 +101,8 @@ Pastikan Anda telah menginstal **Flutter SDK** di komputer Anda.
 
 Jika ada pertanyaan, masukan, atau kendala terkait pengembangan aplikasi ini, silakan hubungi:
 
-* 📧 **Email:** [230605110101@student.uin-malang.ac.id]
-* 🆔 **Identitas:** Dimas Aditya Ramadhan 230605110101
-* 
+* 📧 **Email:** (230605110101@student.uin-malang.ac.id)
+* 🆔 **Identitas:** Dimas Aditya Ramadhan (230605110101)
 
 ---
 
